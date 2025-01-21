@@ -18,7 +18,6 @@ public class TaskController {
     public ResponseEntity<String> addTask(@RequestBody Task task) {
         task.setId(id++);
         tasks.add(task);
-        System.out.println(tasks);
         return ResponseEntity.status(HttpStatus.CREATED).body("Tâche ajoutée : " + task.getTitle() + " avec l'id : " + task.getId());
     }
 
